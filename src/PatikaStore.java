@@ -19,37 +19,38 @@ CellPhone cp = new CellPhone();
 
         int selectCase = input.nextInt();
 
-        boolean control =true;
 
+        boolean control =false;
         do{
+
             switch (selectCase){
                 case 1:
                     System.out.println("1 sectiniz");
                     nb.noteBook();
-                    control = false;
+                    control = true;
                     break;
                 case 2:
                     System.out.println("2 sectiniz");
                     cp.cellPhone();
-                    control = false;
+                    control = true;
                     break;
                 case 3:
                     System.out.println("3 sectiniz");
                     System.out.println("Markalarýmýz :");
                     brands.brandList();
-                    control = false;
+                    control = true;
                     break;
 
                 case 0:
-                    System.out.println("0 sectiniz");
-                    control = false;
+                    System.out.println("Çýkýþ Yaptýnýz.");
+                    control = true;
                     break;
 
                 default:
                     System.out.println("Please Select 0-3");
                     break;
             }
-        } while(control);
+        } while(control==false);
 
 
 
